@@ -142,16 +142,3 @@ sama.
 - Teks terjemahan ID/EN → edit `l10n/app_id.arb` & `app_en.arb`, terus
   jalanin `flutter gen-l10n` (jangan edit `app_localizations.dart`
   langsung, itu file hasil generate, bakal ketiban pas di-generate ulang)
-
-## Yang ga ikut di-share di sini
-
-Folder yang gue kasih cuma `lib/`. Yang ga termasuk: `pubspec.yaml`,
-folder `android/` (konfigurasi native, signing key), dan akses ke
-dashboard-dashboard yang dipake (WooCommerce/wp-admin, Midtrans,
-Cloudinary, RajaOngkir/Komerce, Tawk.to, Sentry, Google Analytics). Semua
-key yang disebut di atas juga cuma jalan kalau akun-akun itu masih aktif
-dan dipegang tim.
-
-Segitu aja dari gue. Semoga lanjutannya lancar. Kalau ada yang aneh dan
-ga kejelasin di sini, cek dulu komentar di masing-masing file — kalau
-masih ga ketemu juga, ya itu risiko namanya warisan kode 🙂
