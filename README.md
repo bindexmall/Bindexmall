@@ -1,144 +1,260 @@
 # Handover — App Bindexmall (Flutter)
 
-Halo, siapapun yang megang project ini setelah gue. Gue tulis dokumen ini
-karena gue resign dan pengen yang lanjutin ga harus reverse-engineer semua
-dari nol. Ini bukan dokumentasi resmi rapi ala perusahaan besar, cuma
-catatan jujur soal gimana app ini disusun dan apa aja yang perlu diwaspadai.
+Dokumen ini dibuat sebagai panduan untuk developer yang melanjutkan project Bindexmall setelah proses handover. Tujuannya sederhana: supaya developer berikutnya tidak perlu mempelajari atau melakukan reverse-engineering project ini dari awal.
 
-Tiap file `.dart` juga udah gue kasih komentar singkat di paling atas
-tentang fungsinya. Jadi kalau bingung satu file ngapain, buka aja, biasanya
-udah kejawab di situ. Dokumen ini lebih ke peta besarnya aja.
+Dokumen ini bukan dokumentasi teknis resmi yang menjelaskan setiap bagian secara detail. Isinya lebih sebagai gambaran umum mengenai struktur aplikasi, alur utama, serta beberapa hal yang perlu diperhatikan sebelum melakukan perubahan.
 
-## Ini app apa
+Setiap file `.dart` juga sudah diberi komentar singkat di bagian paling atas mengenai fungsi file tersebut. Jadi, kalau ada file yang belum familiar, bisa mulai dengan melihat komentar tersebut. Dokumen ini lebih berfungsi sebagai peta besar project.
 
-Bindexmall — toko online ATK/alat tulis + aksesoris apparel outdoor punya
-Bambi Group. Backend-nya WordPress + WooCommerce di bindexmall.com, app
-Flutter ini cuma "muka depan" yang narik data dari REST API WooCommerce.
-Ga ada backend custom terpisah — kecuali dua-tiga endpoint kecil yang
-ditambahin sendiri di WordPress (live settings sama promo banner), itu
-juga kemungkinan lewat plugin/functions.php di sisi WP, bukan aplikasi
-terpisah.
+## Ini App Apa?
 
-Yang dipakai:
-- Flutter buat Android, state management pakai package `provider`
-- WooCommerce REST API buat produk/kategori/pesanan
-- Endpoint JWT custom di WordPress buat login/register/reset password
-- Midtrans Snap buat pembayaran
-- RajaOngkir (lewat Komerce) buat ongkir & data wilayah
-- Cloudinary buat upload bukti transfer
-- Tawk.to buat live chat sama CS (dibuka lewat WebView)
-- Sentry buat pantau error/crash
-- flutter_local_notifications buat notif (ini notif lokal ya, bukan push/FCM)
+Bindexmall adalah aplikasi toko online untuk produk ATK/alat tulis.
 
-## Struktur folder, singkatnya
+Backend aplikasi menggunakan WordPress + WooCommerce di `bindexmall.com`. Aplikasi Flutter berfungsi sebagai frontend yang mengambil dan mengirim data melalui REST API WooCommerce.
 
-- `main.dart` — titik masuk, di sini semua Provider didaftarin
-- `models/` — kelas data doang (Product, Cart, Address, dst), ga ada logic
-- `providers/` — state management, "otak" tiap fitur
-- `repositories/` — jembatan antara provider dengan service/local storage
-- `services/` — yang ngomong ke API luar (WooCommerce, Midtrans, dll)
-- `screens/` — halaman-halaman, 1 file biasanya 1 halaman
-- `widgets/` — komponen yang dipakai berulang-ulang di beberapa halaman
-- `theme/`, `utils/`, `l10n/` — self-explanatory
+Tidak ada backend custom terpisah. Beberapa endpoint tambahan dibuat langsung di sisi WordPress, terutama untuk kebutuhan seperti live settings dan promo banner. Implementasinya berada di plugin custom pada sisi WordPress.
 
-Alurnya biasanya begini: Screen manggil Provider, Provider manggil
-Repository, Repository yang mutusin datanya diambil dari API (lewat
-Service) atau dari penyimpanan lokal HP (SharedPreferences).
+### Teknologi dan service yang digunakan
 
-Yang penting diinget: **cart, wishlist, sama alamat itu disimpen lokal di
-HP**, bukan di server. Dipisah per user (dan ada versi "guest" buat yang
-belum login, nanti otomatis digabung pas dia login). Sementara produk,
-kategori, pesanan itu selalu dari WooCommerce langsung.
+* Flutter untuk aplikasi Android, dengan state management menggunakan package `provider`
+* WooCommerce REST API untuk produk, kategori, pesanan, dan data terkait lainnya
+* Custom JWT endpoint di WordPress untuk login, register, dan reset password
+* Midtrans Snap untuk proses pembayaran
+* RajaOngkir melalui Komerce untuk perhitungan ongkir dan data wilayah
+* Cloudinary untuk upload bukti transfer
+* Tawk.to untuk live chat dengan CS melalui WebView
+* Sentry untuk monitoring error dan crash
+* `flutter_local_notifications` untuk notifikasi lokal
 
-## Alur checkout, biar ga kaget
+> Catatan: notifikasi yang digunakan saat ini adalah **local notification**, bukan push notification menggunakan FCM.
 
-Ini bagian paling gede & paling rawan kalau mau diutak-atik
-(`checkout_screen.dart`, sendirian aja hampir 2500 baris). Urutannya:
-isi/pilih alamat → pilih kurir & hitung ongkir (lewat ShippingProvider,
-yang manggil RajaOngkir) → pasang kupon kalau ada → order dibikin di
-WooCommerce → baru dibuka WebView Midtrans buat bayar. Abis bayar, user
-juga bisa upload bukti transfer manual sebagai jaga-jaga di luar flow
-Midtrans.
+## Struktur Folder
 
-## Hal-hal yang perlu lo tau sebelum pegang ini lebih jauh
+Secara umum, struktur project dibagi seperti berikut:
 
-**Soal API key — udah gue benerin sebagian, tapi belum kelar.**
-Sebelumnya semua key (WooCommerce, Midtrans, RajaOngkir, Cloudinary)
-nangkring polos di masing-masing file service. Sekarang gue udah pindahin
-semua ke satu file: `lib/config/secrets.dart`. File itu ga ikut gue
-commit-in ke git (ada juga `secrets.example.dart` sebagai template kosong
-yang aman di-commit). Instruksi cara pasang ada di komentar paling atas
-`secrets.dart` itu sendiri, dan ada catatan tambahan di
-`lib/config/gitignore-snippet.txt` soal naruh baris gitignore-nya di
-root project (karena yang di-share ke lo cuma folder `lib/`, gue ga bisa
-taruh `.gitignore` di tempat yang seharusnya).
+* `main.dart` — entry point aplikasi. Semua Provider utama didaftarkan di sini.
+* `models/` — berisi model data seperti Product, Cart, Address, dan lainnya. Sebisa mungkin tidak berisi business logic.
+* `providers/` — state management dan logic utama untuk masing-masing fitur.
+* `repositories/` — penghubung antara Provider dengan Service atau local storage.
+* `services/` — menangani komunikasi dengan API eksternal seperti WooCommerce, Midtrans, dan service lainnya.
+* `screens/` — halaman aplikasi. Umumnya satu file mewakili satu halaman.
+* `widgets/` — komponen UI yang digunakan kembali di beberapa halaman.
+* `theme/`, `utils/`, `l10n/` — masing-masing berisi konfigurasi theme, utility/helper, dan localization.
 
-Yang perlu lo tau, ini **baru setengah jalan**:
-- ✅ Udah beres: secret ga lagi ketulis di source code, ga bakal
-  ke-commit lagi ke git ke depannya
-- ❌ Belum beres: kalau APK-nya di-build terus di-decompile orang, key
-  ini tetap kebaca — soalnya pas build, isi `secrets.dart` tetap ikut
-  ke-compile masuk APK juga. Cuma pindah dari "kebaca di source" jadi
-  "kebaca kalau APK dibongkar"
+Secara umum, alurnya:
 
-Yang paling sensitif — **Midtrans server key** (bisa buat cek/batalin
-transaksi) sama **WooCommerce consumer secret** (bisa baca-tulis data
-toko) — idealnya next step-nya dipindah ke proxy endpoint di server
-sendiri, biar key-nya ga pernah nyampe ke APK sama sekali. Belum sempet
-gue kerjain, jadi ini gue titip sebagai PR berikutnya.
+**Screen → Provider → Repository → Service / Local Storage**
 
-Satu hal lagi yang PENTING: kalau repo ini sebelumnya udah pernah
-di-push ke git dengan key yang masih hardcoded (kemungkinan besar iya),
-mindahin ke file terpisah **ga otomatis ngilangin key itu dari riwayat
-commit lama**. Orang yang punya akses ke history git masih bisa gali key
-lama. Paling aman: regenerate/rotate semua key ini di masing-masing
-dashboard (WooCommerce, Midtrans, RajaOngkir, Cloudinary) biar yang lama
-otomatis ga berlaku lagi, baru pasang yang baru di `secrets.dart`.
+Provider menangani state dan logic fitur. Repository menentukan apakah data perlu diambil dari API melalui Service atau dari penyimpanan lokal pada device.
 
-**Ada baris nyisa di main.dart.** Cari `Sentry.captureException` yang
-isinya error contoh — itu ketinggalan dari waktu setup Sentry dulu.
-Efeknya app kirim 1 error palsu ke Sentry tiap kali dibuka. Aman dihapus,
-tapi cek dulu dashboard Sentry-nya barangkali ada yang udah kebiasa liat
-angka itu.
+### Penyimpanan Data
 
-**Ada tiga file beda yang sama-sama punya class namanya
-`SelectLocationScreen`.** Satu di `add_address_screen.dart`, satu di
-`select_shipping_screen.dart`, satu lagi versi lokal di dalem
-`checkout_screen.dart` sendiri. Beda-beda implementasinya, kebetulan
-namanya sama aja. Kalau mau ubah tampilan pilih lokasi, pastiin dulu lo
-ngedit yang bener sesuai alur mana yang lagi dikerjain.
+Hal yang cukup penting untuk diperhatikan:
 
-**Ada dua provider bahasa** — `LanguageProvider` sama `LocaleProvider`,
-fungsinya mirip-mirip. Gue ga sempet beresin ini, jadi kalau mau
-sederhanain sistem bahasa, telusuran dulu di main.dart yang mana yang
-beneran kepake sebelum hapus salah satunya.
+**Cart, wishlist, dan alamat disimpan secara lokal di device**, bukan di server.
 
-**Class `Order` sama `OrderItem` ada di dalem `orders_screen.dart`**,
-bukan di folder models kayak yang lain. Kalau nanti butuh struktur order
-di tempat lain juga, mending dipindahin ke models biar ga dobel definisi.
+Data tersebut dipisahkan berdasarkan user. Untuk user yang belum login, tersedia juga data untuk guest user. Ketika user kemudian login, data guest akan digabungkan sesuai logic yang sudah tersedia.
 
-**`test_connection_screen.dart`** kayaknya tools buat cek koneksi pas
-development dulu. Cek dulu masih ke-route ke UI apa nggak sebelum
-diutak-atik atau dihapus.
+Sementara itu, data seperti:
 
-**Soal PPN** — dulu pernah ada bug pajak kehitung dobel (harga dari
-WooCommerce udah termasuk PPN, terus di app dihitung pajak lagi). Udah
-dibenerin di cart sama checkout. Kalau nanti ada yang mau nambahin
-kalkulasi pajak lagi di jalur cart/checkout, mohon dicek dulu apa harga
-dari WooCommerce udah termasuk pajak apa belum, biar ga keulang bug yang
-sama.
+* Produk
+* Kategori
+* Pesanan
 
-## Kalau mau ngerjain sesuatu, mulai dari mana
+tetap mengambil data langsung dari WooCommerce.
 
-- Ubah tampilan kartu produk di semua halaman → `widgets/product_card.dart`
-- Ubah halaman utama → `home_screen.dart` + folder `widgets/Home/`
-- Logic checkout/ongkir/biaya → `checkout_screen.dart`
-- Nambah field produk baru dari WooCommerce → mulai dari `models/product.dart`,
-  lanjut ke `repositories/product_repository.dart`
-- Nambah endpoint WooCommerce baru → tambahin method-nya di
-  `woocommerce_service.dart`, jangan bikin koneksi baru sendiri
-- Notifikasi lokal → `notification_service.dart`
-- Warna/tema → `theme/app_theme.dart`
-- Teks terjemahan ID/EN → edit `l10n/app_id.arb` & `app_en.arb`, terus
-  jalanin `flutter gen-l10n` (jangan edit `app_localizations.dart`
-  langsung, itu file hasil generate, bakal ketiban pas di-generate ulang)
+## Alur Checkout
+
+Bagian checkout merupakan salah satu bagian paling kompleks dan perlu diperhatikan jika ingin melakukan perubahan.
+
+File utamanya adalah:
+
+`checkout_screen.dart`
+
+File ini sendiri cukup besar, hampir mencapai 2.500 baris, karena menangani cukup banyak proses dalam satu flow.
+
+Secara umum alurnya:
+
+**Pilih alamat → Pilih kurir & hitung ongkir → Masukkan kupon → Buat order di WooCommerce → Pembayaran melalui Midtrans**
+
+Detailnya:
+
+1. User mengisi atau memilih alamat pengiriman.
+2. User memilih kurir.
+3. Ongkir dihitung melalui `ShippingProvider`, yang kemudian menggunakan RajaOngkir/Komerce.
+4. User dapat memasukkan kupon jika tersedia.
+5. Order dibuat di WooCommerce.
+6. Setelah order berhasil dibuat, aplikasi membuka WebView untuk proses pembayaran Midtrans.
+7. Untuk kebutuhan pembayaran manual, user juga dapat mengupload bukti transfer di luar flow Midtrans.
+
+Sebelum mengubah flow checkout, sebaiknya pahami terlebih dahulu hubungan antara `CheckoutScreen`, `ShippingProvider`, WooCommerce Service, dan Midtrans karena perubahan pada salah satu bagian bisa berdampak ke proses order secara keseluruhan.
+
+## Hal-Hal yang Perlu Diperhatikan
+
+### API Key / Secrets
+
+Sebelumnya beberapa credential seperti WooCommerce, Midtrans, RajaOngkir, dan Cloudinary masih ditulis langsung di masing-masing file service.
+
+Saat ini credential tersebut sudah dipindahkan ke:
+
+`lib/config/secrets.dart`
+
+File `secrets.dart` **tidak di-commit ke repository**. Sebagai gantinya tersedia:
+
+`secrets.example.dart`
+
+yang dapat digunakan sebagai template.
+
+Instruksi untuk konfigurasi juga sudah ditulis di komentar bagian atas `secrets.dart`.
+
+Ada juga file:
+
+`lib/config/gitignore-snippet.txt`
+
+yang berisi baris `.gitignore` yang perlu ditambahkan ke `.gitignore` di root project. Karena folder yang digunakan untuk handover hanya mencakup folder `lib/`, konfigurasi `.gitignore` root tidak dapat disertakan di sini.
+
+### Kondisi Security Saat Ini
+
+Pemindahan credential ke `secrets.dart` merupakan perbaikan dari sisi source code, tetapi **belum sepenuhnya menyelesaikan masalah keamanan credential**.
+
+Saat ini kondisinya:
+
+* ✅ Credential tidak lagi ditulis langsung di source code masing-masing service.
+* ✅ `secrets.dart` dapat dikecualikan dari Git sehingga tidak ikut ter-commit lagi.
+* ❌ Credential tetap akan masuk ke dalam APK saat aplikasi di-build.
+* ❌ APK yang sudah jadi masih memungkinkan untuk dianalisis/decompile sehingga credential dapat ditemukan.
+
+Jadi, pemindahan credential ini lebih tepat dianggap sebagai **perbaikan pengelolaan source code**, bukan solusi untuk menyembunyikan credential dari aplikasi client.
+
+Credential yang paling sensitif adalah:
+
+* **Midtrans Server Key** — dapat digunakan untuk kebutuhan seperti pengecekan atau pembatalan transaksi.
+* **WooCommerce Consumer Secret** — memiliki akses untuk membaca/menulis data melalui WooCommerce REST API.
+
+Idealnya, credential tersebut tidak pernah dikirim ke aplikasi Flutter. Langkah berikutnya adalah memindahkan operasi yang membutuhkan credential sensitif ke proxy/backend endpoint sendiri, sehingga aplikasi hanya berkomunikasi dengan endpoint tersebut dan credential tetap berada di server.
+
+Implementasi ini belum dilakukan dan dapat menjadi salah satu pekerjaan lanjutan.
+
+### Credential Lama di Git History
+
+Ada satu hal penting lainnya.
+
+Jika repository sebelumnya pernah di-push ketika API key masih ditulis langsung di source code, memindahkan key ke `secrets.dart` **tidak otomatis menghapus key tersebut dari history Git**.
+
+Siapa pun yang memiliki akses ke repository dan Git history masih mungkin menemukan credential lama.
+
+Karena itu, langkah yang paling aman adalah melakukan **regenerate/rotate credential** pada masing-masing service:
+
+* WooCommerce
+* Midtrans
+* RajaOngkir/Komerce
+* Cloudinary
+
+Setelah credential lama dinonaktifkan, gunakan credential baru di `secrets.dart`.
+
+---
+
+### `Sentry.captureException` di `main.dart`
+
+Di `main.dart` masih terdapat pemanggilan `Sentry.captureException` yang berisi error contoh dari proses setup Sentry.
+
+Kode tersebut kemungkinan merupakan sisa testing dan menyebabkan aplikasi mengirim satu error palsu ke Sentry setiap kali aplikasi dibuka.
+
+Kode tersebut aman untuk dihapus.
+
+Sebelum menghapusnya, sebaiknya cek dashboard Sentry terlebih dahulu untuk memastikan apakah error tersebut masih digunakan sebagai referensi monitoring.
+
+---
+
+### Tiga `SelectLocationScreen`
+
+Terdapat tiga implementasi class dengan nama `SelectLocationScreen`:
+
+1. `add_address_screen.dart`
+2. `select_shipping_screen.dart`
+3. Implementasi lokal di dalam `checkout_screen.dart`
+
+Ketiganya memiliki implementasi yang berbeda meskipun menggunakan nama class yang sama.
+
+Jika ingin mengubah tampilan atau behavior pemilihan lokasi, pastikan terlebih dahulu screen mana yang digunakan oleh flow yang sedang dikerjakan. Jangan langsung mengubah salah satu class berdasarkan nama saja.
+
+---
+
+### Dua Provider Bahasa
+
+Terdapat dua provider yang berkaitan dengan bahasa:
+
+* `LanguageProvider`
+* `LocaleProvider`
+
+Fungsinya cukup mirip dan belum sempat disederhanakan menjadi satu sistem.
+
+Jika nantinya ingin merapikan sistem localization, cek terlebih dahulu `main.dart` dan penggunaan masing-masing provider di project untuk memastikan provider mana yang benar-benar masih digunakan sebelum menghapus salah satunya.
+
+---
+
+### Class `Order` dan `OrderItem`
+
+Class `Order` dan `OrderItem` saat ini berada di:
+
+`orders_screen.dart`
+
+berbeda dengan model lainnya yang berada di folder `models/`.
+
+Jika struktur order nantinya perlu digunakan di beberapa bagian aplikasi, sebaiknya kedua class tersebut dipindahkan ke folder `models/` agar struktur project lebih konsisten dan tidak perlu membuat definisi model tambahan.
+
+---
+
+### `test_connection_screen.dart`
+
+`test_connection_screen.dart` kemungkinan merupakan screen yang digunakan untuk testing koneksi pada tahap development.
+
+Sebelum dihapus, cek terlebih dahulu apakah screen tersebut masih digunakan atau masih terdaftar pada routing aplikasi.
+
+---
+
+### Perhitungan PPN
+
+Sebelumnya pernah terdapat bug pada perhitungan pajak.
+
+Harga produk dari WooCommerce sudah termasuk PPN, tetapi aplikasi sempat menghitung pajak kembali pada proses cart dan checkout sehingga nominal pajak menjadi terhitung dua kali.
+
+Perhitungan tersebut sudah diperbaiki pada bagian cart dan checkout.
+
+Jika nantinya ada perubahan atau penambahan kalkulasi pajak pada flow cart/checkout, pastikan terlebih dahulu apakah harga yang diterima dari WooCommerce sudah termasuk pajak atau belum.
+
+Hal ini perlu diperhatikan agar bug perhitungan pajak ganda tidak muncul kembali.
+
+## Kalau Mau Mengerjakan Sesuatu, Mulai dari Mana?
+
+Beberapa lokasi yang paling sering akan menjadi titik awal saat melakukan perubahan:
+
+| Kebutuhan                                   | File / Folder                                                  |
+| ------------------------------------------- | -------------------------------------------------------------- |
+| Mengubah tampilan product card              | `widgets/product_card.dart`                                    |
+| Mengubah halaman utama                      | `home_screen.dart` + `widgets/Home/`                           |
+| Mengubah logic checkout, ongkir, atau biaya | `checkout_screen.dart`                                         |
+| Menambahkan field produk dari WooCommerce   | `models/product.dart` → `repositories/product_repository.dart` |
+| Menambahkan endpoint WooCommerce            | `woocommerce_service.dart`                                     |
+| Notifikasi lokal                            | `notification_service.dart`                                    |
+| Mengubah warna atau theme                   | `theme/app_theme.dart`                                         |
+| Mengubah teks bahasa Indonesia/Inggris      | `l10n/app_id.arb` & `app_en.arb`                               |
+
+Untuk endpoint WooCommerce baru, sebaiknya tambahkan method pada `woocommerce_service.dart` yang sudah ada daripada membuat koneksi baru di file lain. Dengan begitu struktur komunikasi API tetap konsisten.
+
+Untuk localization, edit file:
+
+* `l10n/app_id.arb`
+* `l10n/app_en.arb`
+
+Setelah itu jalankan:
+
+```bash
+flutter gen-l10n
+```
+
+Jangan melakukan perubahan langsung pada:
+
+`app_localizations.dart`
+
+karena file tersebut merupakan hasil generate dan perubahan manual akan tertimpa ketika proses `flutter gen-l10n` dijalankan kembali.
