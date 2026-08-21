@@ -1,0 +1,1047 @@
+// ============================================================================
+// FILE INI AUTO-GENERATED — JANGAN DIEDIT MANUAL
+// ============================================================================
+// Di-generate otomatis oleh Flutter (flutter gen-l10n) dari file sumber:
+//   lib/l10n/app_en.arb  (Inggris)
+//   lib/l10n/app_id.arb  (Indonesia)
+//
+// Untuk menambah/ubah teks terjemahan: edit file .arb di atas, lalu jalankan
+// `flutter gen-l10n` (atau cukup `flutter run`/`flutter build` yang otomatis
+// menjalankan generator ini). Perubahan manual di file ini akan HILANG saat
+// generator dijalankan ulang.
+// ============================================================================
+
+import 'package:flutter/material.dart';
+
+class AppLocalizations {
+  final Locale locale;
+
+  AppLocalizations(this.locale);
+
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
+  }
+
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
+
+  static final Map<String, Map<String, String>> _localizedValues = {
+    'en': {
+      'appName': 'Bindexmall',
+      'yourShoppingCompanion': 'Your Shopping Companion',
+      'loading': 'Loading...',
+
+      // Catalog Screen
+      'searchProducts': 'Search products...',
+      'errorLoadingProducts': 'Error loading products',
+      'retry': 'Retry',
+      'noProductsFound': 'No products found',
+      'clearSearch': 'Clear search',
+      'filterAndSort': 'Filter & Sort',
+      'clearAll': 'Clear All',
+      'applyFilters': 'Apply Filters',
+      'sortBy': 'Sort By',
+      'name': 'Name',
+      'priceLowToHigh': 'Price: Low to High',
+      'priceHighToLow': 'Price: High to Low',
+      'priceRange': 'Price Range',
+
+      // Categories Screen
+      'settings': 'Settings',
+      'settingsComingSoon': 'Settings feature coming soon',
+      'errorLoadingCategories': 'Error loading categories',
+      'noCategoriesAvailable': 'No categories available',
+      'shopByCategory': 'Shop by Category',
+      'findWhatYouNeed': 'Find what you need',
+
+      // Profile Screen
+      'profile': 'Profile',
+      'guestUser': 'Guest User',
+      'orders': 'Orders',
+      'wishlist': 'Wishlist',
+      'reviews': 'Reviews',
+      'reviewsComingSoon': 'Reviews coming soon',
+      'editProfile': 'Edit Profile',
+      'editProfileComingSoon': 'Edit profile coming soon',
+      'myOrders': 'My Orders',
+      'addresses': 'Addresses',
+      'myWishlist': 'My Wishlist',
+      'notifications': 'Notifications',
+      'notificationSettingsComingSoon': 'Notification settings coming soon',
+      'language': 'Language',
+      'english': 'English',
+      'indonesian': 'Bahasa Indonesia',
+      'selectLanguage': 'Select Language',
+      'languageChangedToEnglish': 'Language changed to English',
+      'languageChangedToIndonesian':
+          'Bahasa berhasil diubah ke Bahasa Indonesia',
+      'helpAndSupport': 'Help & Support',
+      'helpComingSoon': 'Help & Support coming soon',
+      'about': 'About',
+      'aboutBindexmall': 'About Bindexmall',
+      'version': 'Version 1.0.3',
+      'trustedShoppingDestination':
+          'Your trusted shopping destination for quality products at great prices.',
+      'copyright': '© 2025 Bindexmall. All rights reserved.',
+      'close': 'Close',
+      'logout': 'Logout',
+      'logoutConfirmation': 'Are you sure you want to logout?',
+      'cancel': 'Cancel',
+      'cart': 'Cart',
+      'checkout': 'Checkout',
+      'deals': 'Deals',
+      'home': 'Home',
+      'categories': 'Categories',
+      'search': 'Search',
+
+      // Intro Screen
+      'welcomeToBindexmall': 'Welcome to Bindexmall',
+      'discoverAmazingProducts':
+          'Discover amazing products from your favorite brands',
+      'easyShopping': 'Easy Shopping',
+      'browseThousandsOfProducts':
+          'Browse thousands of products with just a few taps',
+      'securePayment': 'Secure Payment',
+      'shopWithConfidence':
+          'Shop with confidence using our secure payment system',
+      'skip': 'Skip',
+      'next': 'Next',
+      'getStarted': 'Get Started',
+
+      // Sign In Screen
+      'signInToContinue': 'Sign in to continue',
+      'email': 'Email',
+      'enterYourEmail': 'Enter your email',
+      'password': 'Password',
+      'enterYourPassword': 'Enter your password',
+      'forgotPassword': 'Forgot Password?',
+      'forgotPasswordComingSoon': 'Forgot password feature coming soon',
+      'signIn': 'Sign In',
+      'or': 'OR',
+      'continueAsGuest': 'Continue as Guest',
+      'dontHaveAccount': 'Don\'t have an account? ',
+      'signUp': 'Sign Up',
+      'pleaseEnterEmail': 'Please enter your email',
+      'pleaseEnterValidEmail': 'Please enter a valid email',
+      'pleaseEnterPassword': 'Please enter your password',
+      'passwordMinLength': 'Password must be at least 6 characters',
+      'signInFailed': 'Sign in failed',
+
+      // Sign Up Screen
+      'createAccount': 'Create Account',
+      'signUpToGetStarted': 'Sign up to get started',
+      'fullName': 'Full Name',
+      'enterYourFullName': 'Enter your full name',
+      'phoneNumberSignUp': 'Phone Number',
+      'enterYourPhoneNumber': 'Enter your phone number',
+      'phoneExample': 'Example: 812XXXXXXXX',
+      'confirmPassword': 'Confirm Password',
+      'reenterYourPassword': 'Re-enter your password',
+      'atLeast6Characters': 'At least 6 characters',
+      'iAgreeToThe': 'I agree to the ',
+      'termsAndConditions': 'Terms and Conditions',
+      'pleaseEnterName': 'Please enter your name',
+      'nameMinLength': 'Name must be at least 3 characters',
+      'pleaseEnterPhoneNumber': 'Please enter your phone number',
+      'phoneMinLength': 'Phone number must be at least 10 digits',
+      'phoneTooLong': 'Phone number is too long',
+      'pleaseConfirmPassword': 'Please confirm your password',
+      'passwordsDoNotMatch': 'Passwords do not match',
+      'pleaseAcceptTerms': 'Please accept terms and conditions',
+      'accountCreatedSuccessfully': 'Account created successfully!',
+      'alreadyHaveAccount': 'Already have an account? ',
+
+      // Forgot Password Screen
+      'resetPassword': 'Reset Password',
+      'forgotYourPassword': 'Forgot Your Password?',
+      'forgotPasswordDescription':
+          'Enter your email address and we\'ll send you a link to reset your password.',
+      'emailAddress': 'Email Address',
+      'sendResetLink': 'Send Reset Link',
+      'backToSignIn': 'Back to Sign In',
+      'checkYourEmail': 'Check Your Email',
+      'resetLinkSentTo': 'We\'ve sent a password reset link to:',
+      'checkEmailInstruction':
+          'Please check your email and follow the instructions to reset your password.',
+      'resendEmail': 'Resend Email',
+
+      // About Screen
+      'yourTrustedShoppingDestination': 'Your Trusted Shopping Destination',
+      'aboutUs': 'About Us',
+      'aboutUsDescription':
+          'Bindexmall is a trusted e-commerce platform offering a variety of quality products at affordable prices. We are committed to providing an easy, safe, and enjoyable online shopping experience.',
+      'originalProduct': 'Original Product',
+      'originalProductDesc': '100% original product and guaranteed',
+      'fastDelivery': 'Fast Delivery',
+      'fastDeliveryDesc': 'Delivery throughout Indonesia',
+      'securePaymentTitle': 'Secure Payment',
+      'securePaymentDesc': 'Various trusted payment methods',
+      'customerService247': 'Customer Service 24/7',
+      'customerService247Desc': 'Ready to help at any time',
+      'followUs': 'Follow Us',
+      'facebook': 'Facebook',
+      'instagram': 'Instagram',
+      'youtube': 'YouTube',
+      'termsConditions': 'Terms & Conditions',
+      'privacyPolicy': 'Privacy Policy',
+      'returnPolicy': 'Return Policy',
+      'securityPrivacy': 'Security & Privacy',
+      'applicationVersion': 'Application Version',
+      'releaseDate': 'Release Date',
+      'platform': 'Platform',
+      'madeWithLoveInIndonesia': 'Made with ❤️ in Indonesia',
+
+      // Add Address Screen
+      'addNewAddress': 'Add New Address',
+      'editAddress': 'Edit Address',
+      'locationInfoMessage':
+          'Location data is used to calculate shipping costs accurately',
+      'personalInformation': 'Personal Information',
+      'firstName': 'First Name',
+      'lastName': 'Last Name',
+      'company': 'Company',
+      'companyOptional': 'Company (Optional)',
+      'phoneHint': '08123456789',
+      'requiredField': 'Required',
+      'phoneMinDigits': 'Phone number must be at least 10 digits',
+      'invalidEmail': 'Invalid email',
+      'shippingLocation': 'Shipping Location',
+      'selectLocationForAccurateShipping':
+          'Select location for accurate shipping cost calculation',
+      'selectShippingLocation': 'Select Shipping Location',
+      'selectedLocation': 'Selected Location',
+      'postalCode': 'Postal Code',
+      'changeLocation': 'Change Location',
+      'fullAddress': 'Full Address',
+      'streetAddress': 'Street Address',
+      'streetAddressHint': 'Jl. Sudirman No. 123',
+      'addressTooShort': 'Address is too short',
+      'apartmentSuiteUnit': 'Apartment, Suite, Unit (Optional)',
+      'apartmentHint': 'Block A No. 5',
+      'setAsDefaultAddress': 'Set as default address',
+      'useAsDefaultForCheckout': 'Use this address as default for checkout',
+      'updateAddress': 'Update Address',
+      'saveAddress': 'Save Address',
+      'locationSelected': '✅ Location selected',
+      'pleaseSelectLocation': '⚠️ Please select shipping location first',
+      'addressUpdatedSuccessfully': '✅ Address updated successfully',
+      'addressAddedSuccessfully': '✅ Address added successfully',
+      'selectLocation': 'Select Location',
+      'province': 'Province',
+      'selectProvince': 'Select Province',
+      'cityRegency': 'City/Regency',
+      'selectCity': 'Select City',
+      'district': 'District',
+      'selectDistrict': 'Select District',
+      'subdistrict': 'Subdistrict/Village',
+      'noSubdistrictFound': 'No subdistrict found',
+
+      // Addresses Screen
+      'myAddresses': 'My Addresses',
+      'loginRequiredTitle': 'Login Required',
+      'loginRequiredAddressMessage':
+          'You need to login to manage your addresses.',
+      'pleaseLoginToManageAddresses': 'Please login to manage your addresses',
+      'addAddress': 'Add Address',
+      'noAddresses': 'No Addresses',
+      'addFirstAddress': 'Add your first address to get started',
+      'default': 'DEFAULT',
+      'edit': 'Edit',
+      'setAsDefault': 'Set as Default',
+      'delete': 'Delete',
+      'deleteAddress': 'Delete Address',
+      'deleteAddressConfirmation':
+          'Are you sure you want to delete this address?',
+      'addressDeleted': 'Address deleted',
+
+      // Cart Screen
+      'shoppingCart': 'Shopping cart',
+      'removeAll': 'Remove all',
+      'yourCartIsEmpty': 'Your cart is empty',
+      'addProductsToGetStarted': 'Add products to get started',
+      'startShopping': 'Start Shopping',
+      'itemsInCart': 'Items in Cart',
+      'itemInCart': 'Item in Cart',
+      'readyToCheckout': 'Ready to checkout',
+      'removedFromCart': 'removed from cart',
+      'voucherDeleted': 'Voucher deleted',
+      'deleteVoucher': 'Delete voucher',
+      'useVouchers': 'Use Vouchers',
+      'voucherApplied': 'Voucher applied',
+      'getDiscountsWithVouchers': 'Get discounts with vouchers',
+      'subtotal': 'Subtotal',
+      'discount': 'Discount',
+      'ppn11': 'PPN (11%)',
+      'total': 'Total',
+      'continueToPayment': 'Continue to Payment',
+      'deleteItems': 'Delete Items',
+      'deleteFromCart': 'from the cart?',
+      'emptyCart': 'Empty Cart',
+      'emptyCartConfirmation':
+          'Are you sure you want to remove all items from your cart?',
+      'cartIsEmptied': 'Cart is emptied',
+      'clearIt': 'Clear it',
+
+      // Checkout Screen
+      'orderSummary': 'Order Summary',
+      'sendAsDropshipper': 'Send As Dropshipper',
+      'dropshipperInfo':
+          'The sender\'s name and number will be displayed on the package.',
+      'senderName': 'Sender Name',
+      'senderNameHint': 'Your shop or business name',
+      'senderPhone': 'Sender\'s Phone No.',
+      'senderPhoneHint': '08xxxxxxxxxx',
+      'recipientInformation': 'Recipient Information',
+      'firstNameRequired': 'First name *',
+      'lastNameRequired': 'Last name *',
+      'telephoneNumber': 'Phone Number *',
+      'telephoneTooShort': 'Phone number must be at least 10 digits',
+      'deliveryLocation': 'Delivery Location',
+      'selectDeliveryLocation': 'Select Delivery Location',
+      'completeAddress': 'Complete address',
+      'streetAddressRequired': 'Street Address *',
+      'shippingMethod': 'Shipping Method',
+      'selectShippingMethod': 'Select Shipping Method',
+      'orderNotes': 'Order Notes (optional)',
+      'orderNotesHint': 'Notes for your order',
+      'paymentMethod': 'Payment Method',
+      'bankTransfer': 'Bank Transfer',
+      'bankTransferAccount': 'BCA 5710900711 a.n. PT. Bambi Mega Niaga',
+      'bankTransferNote':
+          'Upload proof of transfer and include the order number in the notes.',
+      'otherOnlinePayments': 'Other Online Payments',
+      'viaMidtrans': 'via Midtrans',
+      'midtransPaymentMethods':
+          'QRIS, Virtual Account (BCA, BNI, BRI, Mandiri, CIMB), GoPay, Credit/Debit Card',
+      'totalPayment': 'Total payment',
+      'youSave': 'You Save',
+      'placeOrder': 'Place Order',
+      'payNow': 'Pay Now',
+      'pleaseCompleteAllData': 'Please complete all required data',
+      'pleaseSelectDeliveryLocation': 'Please select a delivery location',
+      'yourCartIsEmptyMsg': 'Your cart is empty',
+      'pleaseChooseShippingMethod': 'Please choose a shipping method',
+      'checkoutFailed': 'Checkout failed',
+      'selectDeliveryLocationFirst': 'Select the delivery location first',
+      'noShippingOptionsAvailable': 'No shipping options available',
+      'errorCalculatingShipping': 'Error calculating shipping costs',
+      'noDeliveryOptionsForLocation':
+          'No delivery options available for this location',
+      'calculatingShippingCosts': 'Calculating shipping costs...',
+      'estimate': 'Estimate',
+      'orderSuccessfullyPlaced': 'Order Successfully Placed!',
+      'pleaseTransferPaymentTo': 'Please transfer payment to:',
+      'bank': 'Bank',
+      'accountNo': 'Account No.',
+      'accountName': 'Account Name',
+      'important': 'IMPORTANT',
+      'uploadProofBelow': '1. Upload proof of transfer below',
+      'includeOrderNumber': '2. Include order number in transfer notes',
+      'orderProcessedAfterConfirmation':
+          '3. Order processed after payment confirmed',
+      'uploadPaymentProof': 'Upload Payment Proof',
+      'selectPhoto': 'Select Photo',
+      'upload': 'Upload',
+      'uploadingPaymentProof': 'Uploading payment proof...',
+      'viewOrder': 'View Order',
+      'paymentProofUploadedSuccessfully':
+          'Payment proof uploaded successfully!\nOur team will verify your payment soon.',
+      'noInternetConnection':
+          'No internet connection. Please check your network.',
+      'failedToUpload': 'Failed to upload',
+      'sessionExpired': 'Session expired. Please login again.',
+      'authenticationFailed': 'Authentication failed. Please login again.',
+      'mustBeLoggedInToUpload': 'You must be logged in to upload payment proof',
+      'loginToUpload': 'Login',
+      'failedToPickImage': 'Failed to pick image',
+      'uploadPaymentProofTitle': 'Upload Payment Proof',
+      'chooseFromGallery': 'Choose from Gallery',
+      'takePhoto': 'Take Photo',
+      'paymentSuccessful': 'Payment Successful!',
+      'orderCreatedSuccessfully':
+          'Your order has been successfully created and payment confirmed.',
+      'orderId': 'Order ID',
+      'backToHome': 'Back to Home',
+      'paymentPending': 'Payment pending. Please complete your payment.',
+      'paymentFailed': 'Payment failed. Please try again.',
+      'cancelPayment': 'Cancel Payment?',
+      'cancelPaymentConfirmation':
+          'Are you sure you want to cancel this payment?',
+      'no': 'No',
+      'yesCancel': 'Yes, Cancel',
+      'payment': 'Payment',
+      'shippingCost': 'Shipping cost',
+
+      // Deals Screen
+      'specialDeals': 'Special Deals',
+      'listView': 'List View',
+      'gridView': 'Grid View',
+      'sortBy': 'Sort By',
+      'highestDiscount': 'Highest Discount',
+      'lowestDiscount': 'Lowest Discount',
+      'failedToLoadDeals': 'Failed to load deals',
+      'noDealsAvailable': 'No Deals Available',
+      'checkBackLaterForDeals': 'Check back later for amazing deals!',
+      'hotDeals': '🔥 Hot Deals',
+      'productsOnSale': 'products on sale',
+      'upToOff': 'Up to 83% OFF!',
+      'failedToLoadMore': 'Failed to load more',
+
+      // Additional
+      'loginRequired': 'Login Required',
+      'login': 'Login',
+      'loginNow': 'Login Now',
+
+      // Edit Profile Screen
+      'editYourProfile': 'Edit Your Profile',
+      'sectionFirstName': 'First Name',
+      'sectionLastName': 'Last Name',
+      'sectionPhoneNumber': 'Phone Number',
+      'sectionBio': 'Bio (Optional)',
+      'labelFirstName': 'First Name',
+      'labelLastName': 'Last Name',
+      'labelPhoneNumber': 'Phone Number',
+      'labelBio': 'Tell us about yourself',
+      'firstNameCannotBeBlank': 'First name cannot be blank',
+      'lastNameCannotBeEmpty': 'Last name cannot be empty',
+      'phoneNumberMinDigits': 'Phone number must be at least 10 digits',
+      'saving': 'Saving...',
+      'saveChanges': 'Save Changes',
+      'profileUpdatedSuccessfully': '✅ Profile updated successfully!',
+      'failedToUpdateProfile': '❌ Failed to update profile',
+      'pleaseLogInFirst': 'Please log in first',
+
+      // Help & Support Screen
+      'howCanWeHelp': 'How can we help?',
+      'ourTeamReady247': 'Our team is ready to assist you 24/7',
+      'contactUs': 'Contact Us',
+      'email': 'Email',
+      'emailAddress': 'support@bindexmall.com',
+      'phone': 'Phone',
+      'phoneNumber': '+62 822-2173-6953',
+      'whatsapp': 'WhatsApp',
+      'chatWithUs': 'Chat with us',
+      'liveChat': 'Live Chat',
+      'connectInSeconds': 'Connect in seconds',
+      'faq': 'Frequently Asked Questions (FAQ)',
+      'faqTrackOrder': 'How do I track my order?',
+      'faqTrackOrderAnswer':
+          'You can track your order through the "My Orders" menu on your profile page. Click on the order you want to track to see its current status.',
+      'faqDeliveryTime': 'How long does delivery take?',
+      'faqDeliveryTimeAnswer':
+          'Delivery times vary depending on your location. Generally, it takes 2-5 business days for Java and 3-7 business days for outside Java.',
+      'faqReturnProduct': 'How do I return a product?',
+      'faqReturnProductAnswer':
+          'You can request a return within 7 days of receiving the product. Ensure the product is in its original condition and unused. Also, be sure to record an unboxing video.',
+      'faqPaymentMethods': 'What payment methods are available?',
+      'faqPaymentMethodsAnswer':
+          'We accept various payment methods: Bank Transfer, E-Wallet (GoPay, OVO, DANA) and Credit/Debit Card.',
+      'faqChangeAddress': 'How do I change my shipping address?',
+      'faqChangeAddressAnswer':
+          'Open the "Addresses" menu on your profile page. You can add, edit, or delete shipping addresses there.',
+      'operatingHours': 'Operating Hours',
+      'mondayFriday': 'Monday - Friday',
+      'workingHours': '08:00 - 17:00 WIB',
+
+      // Home Screen
+      'errorLoadingCategories': 'Error loading categories',
+      'retry': 'Retry',
+      'noCategoriesAvailable': 'No categories available',
+      'shopByCategory': 'Shop by Category',
+      'findWhatYouNeed': 'Find what you need',
+      'deals': 'Deals',
+      'wishlist': 'Wishlist',
+      'track': 'Track',
+      'unableToLoadLiveStream': 'Unable to load live stream settings',
+      'liveStreamNotAvailable': 'Live stream is not available at the moment',
+      'refresh': 'Refresh',
+      'notificationSettings': 'Notification Settings',
+      'enableNotifications': 'Enable Notifications',
+      'receiveAllNotifications': 'Receive all notifications',
+      'orderUpdates': 'Order Updates',
+      'statusChangesDelivery': 'Status changes & delivery',
+      'newsletterPromos': 'Newsletter & Promos',
+      'dealsSpecialOffers': 'Deals and special offers',
+      'done': 'Done',
+
+      //live Chat Screen
+      'customerSupport': 'Customer Support',
+      'online': 'Online',
+      'connecting': 'Connecting',
+      'connected': 'Connected',
+      'reconnecting': 'Reconnecting',
+      'reloadChat': 'Reload Chat',
+      'refreshTheConversation': 'Refresh The Conversation',
+      'clearCache': 'Clear Cache',
+      'cacheClearedSuccessfully': 'Cache Cleared Successfully',
+      'about': 'About',
+      'chatInformation': 'Chat Information',
+      'liveChat': 'Live Chat',
+      'gotIt': 'Got It',
+
+      // Live Stream Screen
+      'openingLiveStream': 'Opening live stream...',
+      'watchOnTikTok': 'Watch on TikTok',
+      'youtubeLive': 'YouTube Live',
+      'openInYouTube': 'Open in YouTube',
+      'cannotLoadVideo': 'Cannot Load Video',
+      'tryAgain': 'Try Again',
+      'openInYouTubeApp': 'Open in YouTube App',
+      'loadingYouTubeLive': 'Loading YouTube Live...',
+
+      // Main Screen / Bottom Navigation
+      'home': 'Home',
+      'shop': 'Shop',
+      'orders': 'Orders',
+      'profile': 'Profile',
+
+      // Order Detail Screen
+      'orderDetail': 'Order Detail',
+      'order': 'Order',
+      'orderStatus': 'Order Status',
+
+      // Orders Screen
+      'all': 'All',
+
+      // Product Detail Screen
+      'description': 'Description',
+      'specifications': 'Specifications',
+      'weight': 'Weight',
+      'addToCart': '+ Add to Cart',
+      'outOfStock': 'Out of Stock',
+      'addedToWishlist': 'Added to wishlist',
+      'removedFromWishlist': 'Removed from wishlist',
+
+      // New Widget Home
+      'flashSale': 'Flash Sale',
+      'endsIn': 'Ends in',
+      'seeAll': 'See All',
+      'seeAllDeals': 'See All Deals',
+      'bestSellers': 'Best Sellers',
+      'mostPopularProducts': 'Most popular products',
+      'newArrivals': 'New Arrivals',
+      'justLanded': 'Just landed for you',
+      'new': 'NEW',
+      'outOfStock': 'Out of Stock',
+      'addedToCart': 'Added to cart',
+    },
+    'id': {
+      'appName': 'Bindexmall',
+      'yourShoppingCompanion': 'Teman Belanja Anda',
+      'loading': 'Memuat...',
+
+      // Catalog Screen
+      'searchProducts': 'Cari produk...',
+      'errorLoadingProducts': 'Gagal memuat produk',
+      'retry': 'Coba Lagi',
+      'noProductsFound': 'Produk tidak ditemukan',
+      'clearSearch': 'Hapus pencarian',
+      'filterAndSort': 'Filter & Urutkan',
+      'clearAll': 'Hapus Semua',
+      'applyFilters': 'Terapkan Filter',
+      'sortBy': 'Urutkan Berdasarkan',
+      'name': 'Nama',
+      'priceLowToHigh': 'Harga: Rendah ke Tinggi',
+      'priceHighToLow': 'Harga: Tinggi ke Rendah',
+      'priceRange': 'Rentang Harga',
+
+      // Profile Screen
+      'profile': 'Profil',
+      'guestUser': 'Pengguna Tamu',
+      'orders': 'Pesanan',
+      'wishlist': 'Favorit',
+      'reviews': 'Ulasan',
+      'reviewsComingSoon': 'Ulasan segera hadir',
+      'editProfile': 'Edit Profil',
+      'editProfileComingSoon': 'Edit profil segera hadir',
+      'myOrders': 'Pesanan Saya',
+      'addresses': 'Alamat',
+      'myWishlist': 'Favorit Saya',
+      'notifications': 'Notifikasi',
+      'notificationSettingsComingSoon': 'Pengaturan notifikasi segera hadir',
+      'language': 'Bahasa',
+      'english': 'English',
+      'indonesian': 'Bahasa Indonesia',
+      'selectLanguage': 'Pilih Bahasa',
+      'languageChangedToEnglish': 'Language changed to English',
+      'languageChangedToIndonesian':
+          'Bahasa berhasil diubah ke Bahasa Indonesia',
+      'helpAndSupport': 'Bantuan & Dukungan',
+      'helpComingSoon': 'Bantuan & Dukungan segera hadir',
+      'about': 'Tentang',
+      'aboutBindexmall': 'Tentang Bindexmall',
+      'version': 'Versi 1.0.3',
+      'trustedShoppingDestination':
+          'Destinasi belanja terpercaya Anda untuk produk berkualitas dengan harga terbaik.',
+      'copyright': '© 2025 Bindexmall. Hak cipta dilindungi.',
+      'close': 'Tutup',
+      'logout': 'Keluar',
+      'logoutConfirmation': 'Apakah Anda yakin ingin keluar?',
+      'cancel': 'Batal',
+      'cart': 'Keranjang',
+      'checkout': 'Checkout',
+      'deals': 'Penawaran',
+      'home': 'Beranda',
+      'categories': 'Kategori',
+      'search': 'Cari',
+
+      // Intro Screen
+      'welcomeToBindexmall': 'Selamat Datang di Bindexmall',
+      'discoverAmazingProducts':
+          'Temukan produk menakjubkan dari merek favorit Anda',
+      'easyShopping': 'Belanja Mudah',
+      'browseThousandsOfProducts':
+          'Jelajahi ribuan produk hanya dengan beberapa ketukan',
+      'securePayment': 'Pembayaran Aman',
+      'shopWithConfidence':
+          'Berbelanja dengan percaya diri menggunakan sistem pembayaran aman kami',
+      'skip': 'Lewati',
+      'next': 'Selanjutnya',
+      'getStarted': 'Mulai',
+
+      // Sign In Screen
+      'signInToContinue': 'Masuk untuk melanjutkan',
+      'email': 'Email',
+      'enterYourEmail': 'Masukkan email Anda',
+      'password': 'Kata Sandi',
+      'enterYourPassword': 'Masukkan kata sandi Anda',
+      'forgotPassword': 'Lupa Kata Sandi?',
+      'forgotPasswordComingSoon': 'Fitur lupa kata sandi segera hadir',
+      'signIn': 'Masuk',
+      'or': 'ATAU',
+      'continueAsGuest': 'Lanjutkan sebagai Tamu',
+      'dontHaveAccount': 'Belum punya akun? ',
+      'signUp': 'Daftar',
+      'pleaseEnterEmail': 'Silakan masukkan email Anda',
+      'pleaseEnterValidEmail': 'Silakan masukkan email yang valid',
+      'pleaseEnterPassword': 'Silakan masukkan kata sandi Anda',
+      'passwordMinLength': 'Kata sandi minimal 6 karakter',
+      'signInFailed': 'Gagal masuk',
+
+      // Sign Up Screen
+      'createAccount': 'Buat Akun',
+      'signUpToGetStarted': 'Daftar untuk memulai',
+      'fullName': 'Nama Lengkap',
+      'enterYourFullName': 'Masukkan nama lengkap Anda',
+      'phoneNumberSignUp': 'Nomor Telepon',
+      'enterYourPhoneNumber': 'Masukkan nomor telepon Anda',
+      'phoneExample': 'Contoh: 812XXXXXXXX',
+      'confirmPassword': 'Konfirmasi Kata Sandi',
+      'reenterYourPassword': 'Masukkan kembali kata sandi Anda',
+      'atLeast6Characters': 'Minimal 6 karakter',
+      'iAgreeToThe': 'Saya setuju dengan ',
+      'termsAndConditions': 'Syarat dan Ketentuan',
+      'pleaseEnterName': 'Silakan masukkan nama Anda',
+      'nameMinLength': 'Nama minimal 3 karakter',
+      'pleaseEnterPhoneNumber': 'Silakan masukkan nomor telepon Anda',
+      'phoneMinDigits': 'Nomor telepon minimal 10 digit',
+      'phoneTooLong': 'Nomor telepon terlalu panjang',
+      'pleaseConfirmPassword': 'Silakan konfirmasi kata sandi Anda',
+      'passwordsDoNotMatch': 'Kata sandi tidak cocok',
+      'pleaseAcceptTerms': 'Silakan setujui syarat dan ketentuan',
+      'accountCreatedSuccessfully': 'Akun berhasil dibuat!',
+      'alreadyHaveAccount': 'Sudah punya akun? ',
+
+      // Forgot Password Screen
+      'resetPassword': 'Reset Kata Sandi',
+      'forgotYourPassword': 'Lupa Kata Sandi?',
+      'forgotPasswordDescription':
+          'Masukkan alamat email Anda dan kami akan mengirimkan tautan untuk mereset kata sandi Anda.',
+      'emailAddress': 'Alamat Email',
+      'sendResetLink': 'Kirim Tautan Reset',
+      'backToSignIn': 'Kembali ke Masuk',
+      'checkYourEmail': 'Periksa Email Anda',
+      'resetLinkSentTo': 'Kami telah mengirim tautan reset kata sandi ke:',
+      'checkEmailInstruction':
+          'Silakan periksa email Anda dan ikuti instruksi untuk mereset kata sandi Anda.',
+      'resendEmail': 'Kirim Ulang Email',
+
+      // About Screen
+      'yourTrustedShoppingDestination': 'Destinasi Belanja Terpercaya Anda',
+      'aboutUs': 'Tentang Kami',
+      'aboutUsDescription':
+          'Bindexmall adalah platform e-commerce terpercaya yang menawarkan berbagai produk berkualitas dengan harga terjangkau. Kami berkomitmen untuk memberikan pengalaman belanja online yang mudah, aman, dan menyenangkan.',
+      'originalProduct': 'Produk Original',
+      'originalProductDesc': '100% produk original dan bergaransi',
+      'fastDelivery': 'Pengiriman Cepat',
+      'fastDeliveryDesc': 'Pengiriman ke seluruh Indonesia',
+      'securePaymentTitle': 'Pembayaran Aman',
+      'securePaymentDesc': 'Berbagai metode pembayaran terpercaya',
+      'customerService247': 'Layanan Pelanggan 24/7',
+      'customerService247Desc': 'Siap membantu kapan saja',
+      'followUs': 'Ikuti Kami',
+      'facebook': 'Facebook',
+      'instagram': 'Instagram',
+      'youtube': 'YouTube',
+      'termsConditions': 'Syarat & Ketentuan',
+      'privacyPolicy': 'Kebijakan Privasi',
+      'returnPolicy': 'Kebijakan Pengembalian',
+      'securityPrivacy': 'Keamanan & Privasi',
+      'applicationVersion': 'Versi Aplikasi',
+      'releaseDate': 'Tanggal Rilis',
+      'platform': 'Platform',
+      'madeWithLoveInIndonesia': 'Dibuat dengan ❤️ di Indonesia',
+
+      // Add Address Screen
+      'addNewAddress': 'Tambah Alamat Baru',
+      'editAddress': 'Edit Alamat',
+      'locationInfoMessage':
+          'Data lokasi digunakan untuk menghitung ongkir dengan akurat',
+      'personalInformation': 'Informasi Personal',
+      'firstName': 'Nama Depan',
+      'lastName': 'Nama Belakang',
+      'company': 'Perusahaan',
+      'companyOptional': 'Perusahaan (Opsional)',
+      'phoneHint': '08123456789',
+      'requiredField': 'Wajib diisi',
+      'phoneMinDigits': 'Nomor telepon minimal 10 digit',
+      'invalidEmail': 'Email tidak valid',
+      'shippingLocation': 'Lokasi Pengiriman',
+      'selectLocationForAccurateShipping':
+          'Pilih lokasi untuk perhitungan ongkir yang akurat',
+      'selectShippingLocation': 'Pilih Lokasi Pengiriman',
+      'selectedLocation': 'Lokasi Terpilih',
+      'postalCode': 'Kode Pos',
+      'changeLocation': 'Ubah Lokasi',
+      'fullAddress': 'Alamat Lengkap',
+      'streetAddress': 'Alamat Jalan',
+      'streetAddressHint': 'Jl. Sudirman No. 123',
+      'addressTooShort': 'Alamat terlalu pendek',
+      'apartmentSuiteUnit': 'Apartemen, Suite, Unit (Opsional)',
+      'apartmentHint': 'Blok A No. 5',
+      'setAsDefaultAddress': 'Jadikan alamat utama',
+      'useAsDefaultForCheckout':
+          'Gunakan alamat ini sebagai default untuk checkout',
+      'updateAddress': 'Update Alamat',
+      'saveAddress': 'Simpan Alamat',
+      'locationSelected': '✅ Lokasi dipilih',
+      'pleaseSelectLocation':
+          '⚠️ Mohon pilih lokasi pengiriman terlebih dahulu',
+      'addressUpdatedSuccessfully': '✅ Alamat berhasil diupdate',
+      'addressAddedSuccessfully': '✅ Alamat berhasil ditambahkan',
+      'selectLocation': 'Pilih Lokasi',
+      'province': 'Provinsi',
+      'selectProvince': 'Pilih Provinsi',
+      'cityRegency': 'Kota/Kabupaten',
+      'selectCity': 'Pilih Kota',
+      'district': 'Kecamatan',
+      'selectDistrict': 'Pilih Kecamatan',
+      'subdistrict': 'Kelurahan/Desa',
+      'noSubdistrictFound': 'Tidak ada kelurahan ditemukan',
+
+      // Addresses Screen
+      'myAddresses': 'Alamat Saya',
+      'loginRequiredTitle': 'Login Diperlukan',
+      'loginRequiredAddressMessage': 'Anda perlu login untuk mengelola alamat.',
+      'pleaseLoginToManageAddresses':
+          'Silakan login untuk mengelola alamat Anda',
+      'addAddress': 'Tambah Alamat',
+      'noAddresses': 'Tidak Ada Alamat',
+      'addFirstAddress': 'Tambahkan alamat pertama Anda untuk memulai',
+      'default': 'UTAMA',
+      'edit': 'Edit',
+      'setAsDefault': 'Jadikan Utama',
+      'delete': 'Hapus',
+      'deleteAddress': 'Hapus Alamat',
+      'deleteAddressConfirmation':
+          'Apakah Anda yakin ingin menghapus alamat ini?',
+      'addressDeleted': 'Alamat dihapus',
+
+      // Cart Screen
+      'shoppingCart': 'Keranjang belanja',
+      'removeAll': 'Hapus semua',
+      'yourCartIsEmpty': 'Keranjang Anda kosong',
+      'addProductsToGetStarted': 'Tambahkan produk untuk memulai',
+      'startShopping': 'Mulai Belanja',
+      'itemsInCart': 'Barang di Keranjang',
+      'itemInCart': 'Barang di Keranjang',
+      'readyToCheckout': 'Siap checkout',
+      'removedFromCart': 'dihapus dari keranjang',
+      'voucherDeleted': 'Voucher dihapus',
+      'deleteVoucher': 'Hapus voucher',
+      'useVouchers': 'Gunakan Voucher',
+      'voucherApplied': 'Voucher diterapkan',
+      'getDiscountsWithVouchers': 'Dapatkan diskon dengan voucher',
+      'subtotal': 'Subtotal',
+      'discount': 'Diskon',
+      'ppn11': 'PPN (11%)',
+      'total': 'Total',
+      'continueToPayment': 'Lanjut ke Pembayaran',
+      'deleteItems': 'Hapus Barang',
+      'deleteFromCart': 'dari keranjang?',
+      'emptyCart': 'Kosongkan Keranjang',
+      'emptyCartConfirmation':
+          'Apakah Anda yakin ingin menghapus semua barang dari keranjang?',
+      'cartIsEmptied': 'Keranjang dikosongkan',
+      'clearIt': 'Kosongkan',
+
+      // Checkout Screen
+      'orderSummary': 'Ringkasan Pesanan',
+      'sendAsDropshipper': 'Kirim Sebagai Dropshipper',
+      'dropshipperInfo': 'Nama dan nomor pengirim akan ditampilkan pada paket.',
+      'senderName': 'Nama Pengirim',
+      'senderNameHint': 'Nama toko atau bisnis Anda',
+      'senderPhone': 'No. Telepon Pengirim',
+      'senderPhoneHint': '08xxxxxxxxxx',
+      'recipientInformation': 'Informasi Penerima',
+      'firstNameRequired': 'Nama depan *',
+      'lastNameRequired': 'Nama belakang *',
+      'telephoneNumber': 'No. Telepon *',
+      'telephoneTooShort': 'Nomor telepon minimal 10 digit',
+      'deliveryLocation': 'Lokasi Pengiriman',
+      'selectDeliveryLocation': 'Pilih Lokasi Pengiriman',
+      'completeAddress': 'Alamat lengkap',
+      'streetAddressRequired': 'Alamat Jalan *',
+      'shippingMethod': 'Metode Pengiriman',
+      'selectShippingMethod': 'Pilih Metode Pengiriman',
+      'orderNotes': 'Catatan Pesanan (opsional)',
+      'orderNotesHint': 'Catatan untuk pesanan Anda',
+      'paymentMethod': 'Metode Pembayaran',
+      'bankTransfer': 'Transfer Bank',
+      'bankTransferAccount': 'BCA 5710900711 a.n. PT. Bambi Mega Niaga',
+      'bankTransferNote':
+          'Upload bukti transfer dan sertakan nomor pesanan pada catatan.',
+      'otherOnlinePayments': 'Pembayaran Online Lainnya',
+      'viaMidtrans': 'via Midtrans',
+      'midtransPaymentMethods':
+          'QRIS, Virtual Account (BCA, BNI, BRI, Mandiri, CIMB), GoPay, Kartu Kredit/Debit',
+      'totalPayment': 'Total pembayaran',
+      'youSave': 'Anda Hemat',
+      'placeOrder': 'Buat Pesanan',
+      'payNow': 'Bayar Sekarang',
+      'pleaseCompleteAllData': 'Mohon lengkapi semua data yang diperlukan',
+      'pleaseSelectDeliveryLocation': 'Mohon pilih lokasi pengiriman',
+      'yourCartIsEmptyMsg': 'Keranjang Anda kosong',
+      'pleaseChooseShippingMethod': 'Mohon pilih metode pengiriman',
+      'checkoutFailed': 'Checkout gagal',
+      'selectDeliveryLocationFirst': 'Pilih lokasi pengiriman terlebih dahulu',
+      'noShippingOptionsAvailable': 'Tidak ada opsi pengiriman tersedia',
+      'errorCalculatingShipping': 'Gagal menghitung ongkos kirim',
+      'noDeliveryOptionsForLocation':
+          'Tidak ada opsi pengiriman tersedia untuk lokasi ini',
+      'calculatingShippingCosts': 'Menghitung ongkos kirim...',
+      'estimate': 'Estimasi',
+      'orderSuccessfullyPlaced': 'Pesanan Berhasil Dibuat!',
+      'pleaseTransferPaymentTo': 'Mohon transfer pembayaran ke:',
+      'bank': 'Bank',
+      'accountNo': 'No. Rekening',
+      'accountName': 'Nama Rekening',
+      'important': 'PENTING',
+      'uploadProofBelow': '1. Upload bukti transfer di bawah',
+      'includeOrderNumber': '2. Sertakan nomor pesanan pada catatan transfer',
+      'orderProcessedAfterConfirmation':
+          '3. Pesanan diproses setelah pembayaran dikonfirmasi',
+      'uploadPaymentProof': 'Upload Bukti Pembayaran',
+      'selectPhoto': 'Pilih Foto',
+      'upload': 'Upload',
+      'uploadingPaymentProof': 'Mengupload bukti pembayaran...',
+      'viewOrder': 'Lihat Pesanan',
+      'paymentProofUploadedSuccessfully':
+          'Bukti pembayaran berhasil diupload!\nTim kami akan memverifikasi pembayaran Anda segera.',
+      'noInternetConnection':
+          'Tidak ada koneksi internet. Mohon periksa jaringan Anda.',
+      'failedToUpload': 'Gagal mengupload',
+      'sessionExpired': 'Sesi berakhir. Silakan login kembali.',
+      'authenticationFailed': 'Autentikasi gagal. Silakan login kembali.',
+      'mustBeLoggedInToUpload':
+          'Anda harus login untuk mengupload bukti pembayaran',
+      'loginToUpload': 'Login',
+      'failedToPickImage': 'Gagal memilih gambar',
+      'uploadPaymentProofTitle': 'Upload Bukti Pembayaran',
+      'chooseFromGallery': 'Pilih dari Galeri',
+      'takePhoto': 'Ambil Foto',
+      'paymentSuccessful': 'Pembayaran Berhasil!',
+      'orderCreatedSuccessfully':
+          'Pesanan Anda telah berhasil dibuat dan pembayaran dikonfirmasi.',
+      'orderId': 'ID Pesanan',
+      'backToHome': 'Kembali ke Beranda',
+      'paymentPending':
+          'Pembayaran tertunda. Silakan selesaikan pembayaran Anda.',
+      'paymentFailed': 'Pembayaran gagal. Silakan coba lagi.',
+      'cancelPayment': 'Batalkan Pembayaran?',
+      'cancelPaymentConfirmation':
+          'Apakah Anda yakin ingin membatalkan pembayaran ini?',
+      'no': 'Tidak',
+      'yesCancel': 'Ya, Batalkan',
+      'payment': 'Pembayaran',
+      'shippingCost': 'Ongkos kirim',
+
+      // Deals Screen
+      'specialDeals': 'Penawaran Spesial',
+      'listView': 'Tampilan List',
+      'gridView': 'Tampilan Grid',
+      'sortBy': 'Urutkan',
+      'highestDiscount': 'Diskon Tertinggi',
+      'lowestDiscount': 'Diskon Terendah',
+      'failedToLoadDeals': 'Gagal memuat penawaran',
+      'noDealsAvailable': 'Tidak Ada Penawaran',
+      'checkBackLaterForDeals':
+          'Periksa kembali nanti untuk penawaran menarik!',
+      'hotDeals': '🔥 Penawaran Spesial',
+      'productsOnSale': 'produk sedang diskon',
+      'upToOff': 'Diskon hingga 83%!',
+      'failedToLoadMore': 'Gagal memuat lebih banyak',
+
+      // Additional
+      'loginRequired': 'Diperlukan Masuk',
+      'login': 'Masuk',
+      'loginNow': 'Masuk Sekarang',
+
+      // Edit Profile Screen
+      'editYourProfile': 'Edit Profil Anda',
+      'sectionFirstName': 'Nama Depan',
+      'sectionLastName': 'Nama Belakang',
+      'sectionPhoneNumber': 'Nomor Telepon',
+      'sectionBio': 'Bio (Opsional)',
+      'labelFirstName': 'Nama Depan',
+      'labelLastName': 'Nama Belakang',
+      'labelPhoneNumber': 'Nomor Telepon',
+      'labelBio': 'Ceritakan kepada kami tentang diri Anda',
+      'firstNameCannotBeBlank': 'Nama depan tidak boleh kosong',
+      'lastNameCannotBeEmpty': 'Nama belakang tidak boleh kosong',
+      'phoneNumberMinDigits': 'Nomor telepon harus minimal 10 digit',
+      'saving': 'Menyimpan...',
+      'saveChanges': 'Simpan Perubahan',
+      'profileUpdatedSuccessfully': '✅ Profil berhasil diperbarui!',
+      'failedToUpdateProfile': '❌ Gagal memperbarui profil',
+      'pleaseLogInFirst': 'Silakan login terlebih dahulu',
+
+      // Help & Support Screen
+      'howCanWeHelp': 'Bagaimana kami dapat membantu?',
+      'ourTeamReady247': 'Tim kami siap membantu Anda 24/7',
+      'contactUs': 'Hubungi kami',
+      'email': 'Email',
+      'emailAddress': 'support@bindexmall.com',
+      'phone': 'Telepon',
+      'phoneNumber': '+62 822-2173-6953',
+      'whatsapp': 'WhatsApp',
+      'chatWithUs': 'Ngobrol dengan kami',
+      'liveChat': 'Obrolan Langsung',
+      'connectInSeconds': 'Terhubung dalam hitungan detik',
+      'faq': 'Pertanyaan yang Sering Diajukan (FAQ)',
+      'faqTrackOrder': 'Bagaimana cara melacak pesanan saya?',
+      'faqTrackOrderAnswer':
+          'Anda dapat melacak pesanan Anda melalui menu "Pesanan Saya" di halaman profil Anda. Klik pesanan yang ingin Anda lacak untuk melihat status terkini.',
+      'faqDeliveryTime': 'Berapa lama waktu pengirimannya?',
+      'faqDeliveryTimeAnswer':
+          'Waktu pengiriman bervariasi tergantung lokasi Anda. Umumnya, dibutuhkan 2-5 hari kerja untuk wilayah Jawa dan 3-7 hari kerja untuk luar Jawa.',
+      'faqReturnProduct': 'Bagaimana cara mengembalikan produk?',
+      'faqReturnProductAnswer':
+          'Anda dapat meminta pengembalian dalam waktu 7 hari setelah menerima produk. Pastikan produk dalam kondisi asli dan belum pernah digunakan. Pastikan juga untuk merekam video unboxing.',
+      'faqPaymentMethods': 'Metode pembayaran apa yang tersedia?',
+      'faqPaymentMethodsAnswer':
+          'Kami menerima berbagai metode pembayaran: Transfer Bank, E-Wallet (GoPay, OVO, DANA) dan Kartu Kredit/Debit.',
+      'faqChangeAddress': 'Bagaimana cara mengubah alamat pengiriman saya?',
+      'faqChangeAddressAnswer':
+          'Buka menu "Alamat" di halaman profil Anda. Anda dapat menambahkan, mengedit, atau menghapus alamat pengiriman di sana.',
+      'operatingHours': 'Jam Operasional',
+      'mondayFriday': 'Senin - Jumat',
+      'workingHours': '08:00 - 17:00 WIB',
+
+      // Home Screen
+      'errorLoadingCategories': 'Terjadi kesalahan saat memuat kategori',
+      'retry': 'Mencoba kembali',
+      'noCategoriesAvailable': 'Tidak ada kategori yang tersedia',
+      'shopByCategory': 'Belanja berdasarkan Kategori',
+      'findWhatYouNeed': 'Temukan apa yang Anda butuhkan',
+      'deals': 'Penawaran',
+      'wishlist': 'Wishlist',
+      'track': 'Melacak',
+      'unableToLoadLiveStream':
+          'Tidak dapat memuat pengaturan streaming langsung',
+      'liveStreamNotAvailable': 'Streaming langsung tidak tersedia saat ini',
+      'refresh': 'Menyegarkan',
+      'notificationSettings': 'Pengaturan Pemberitahuan',
+      'enableNotifications': 'Aktifkan Notifikasi',
+      'receiveAllNotifications': 'Terima semua notifikasi',
+      'orderUpdates': 'Pembaruan Pesanan',
+      'statusChangesDelivery': 'Perubahan status & pengiriman',
+      'newsletterPromos': 'Buletin & Promo',
+      'dealsSpecialOffers': 'Penawaran dan penawaran khusus',
+      'done': 'Selesai',
+
+      //live Chat Screen
+      'customerSupport': 'Dukungan Pelanggan',
+      'online': 'On line',
+      'connecting': 'Menghubungkan',
+      'connected': 'Terhubung',
+      'reconnecting': 'Menghubungkan kembali',
+      'reloadChat': 'Memuat ulang Obrolan',
+      'refreshTheConversation': 'Segarkan Percakapan',
+      'clearCache': 'Hapus Cache',
+      'cacheClearedSuccessfully': 'Cache Berhasil Dihapus',
+      'about': 'Tentang',
+      'chatInformation': 'Informasi Obrolan',
+      'liveChat': 'Obrolan Langsung',
+      'gotIt': 'Mengerti',
+
+      // Live Stream Screen
+      'openingLiveStream': 'Membuka live stream...',
+      'watchOnTikTok': 'Tonton di TikTok',
+      'youtubeLive': 'YouTube Live',
+      'openInYouTube': 'Buka di YouTube',
+      'cannotLoadVideo': 'Tidak Dapat Memuat Video',
+      'tryAgain': 'Coba Lagi',
+      'openInYouTubeApp': 'Buka di Aplikasi YouTube',
+      'loadingYouTubeLive': 'Memuat YouTube Live...',
+
+      // Main Screen / Bottom Navigation
+      'home': 'Beranda',
+      'shop': 'Toko',
+      'orders': 'Pesanan',
+      'profile': 'Profil',
+
+      // Order Detail Screen
+      'orderDetail': 'Detail Pesanan',
+      'order': 'Pesanan',
+      'orderStatus': 'Status Pesanan',
+
+      // Orders Screen
+      'all': 'Semua',
+
+      // Product Detail Screen
+      'description': 'Deskripsi',
+      'specifications': 'Spesifikasi',
+      'weight': 'Berat',
+      'addToCart': '+ Tambah ke Keranjang',
+      'outOfStock': 'Stok Habis',
+      'addedToWishlist': 'Ditambahkan ke wishlist',
+      'removedFromWishlist': 'Dihapus dari wishlist',
+
+      //New Widget Home
+      'flashSale': 'Flash Sale',
+      'endsIn': 'Berakhir dalam',
+      'seeAll': 'Lihat Semua',
+      'seeAllDeals': 'Lihat Semua Penawaran',
+      'bestSellers': 'Terlaris',
+      'mostPopularProducts': 'Produk paling diminati',
+      'newArrivals': 'Produk Baru',
+      'justLanded': 'Baru saja tiba untukmu',
+      'new': 'BARU',
+      'outOfStock': 'Habis',
+      'addedToCart': 'Ditambahkan ke keranjang',
+    }
+  };
+
+  String translate(String key) {
+    return _localizedValues[locale.languageCode]?[key] ?? key;
+  }
+}
+
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
+  const _AppLocalizationsDelegate();
+
+  @override
+  bool isSupported(Locale locale) {
+    return ['en', 'id'].contains(locale.languageCode);
+  }
+
+  @override
+  Future<AppLocalizations> load(Locale locale) async {
+    return AppLocalizations(locale);
+  }
+
+  @override
+  bool shouldReload(_AppLocalizationsDelegate old) => false;
+}

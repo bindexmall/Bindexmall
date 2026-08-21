@@ -1,0 +1,293 @@
+{
+  "@@locale": "id",
+  
+  "appName": "Bindexmall",
+  "yourShoppingCompanion": "Teman Belanja Anda",
+  "loading": "Memuat...",
+  
+  "profile": "Profil",
+  "guestUser": "Pengguna Tamu",
+  "orders": "Pesanan",
+  "wishlist": "Favorit",
+  "reviews": "Ulasan",
+  "reviewsComingSoon": "Ulasan segera hadir",
+  
+  "editProfile": "Edit Profil",
+  "editProfileComingSoon": "Edit profil segera hadir",
+  "myOrders": "Pesanan Saya",
+  "addresses": "Alamat",
+  "myWishlist": "Favorit Saya",
+  
+  "notifications": "Notifikasi",
+  "notificationSettingsComingSoon": "Pengaturan notifikasi segera hadir",
+  "language": "Bahasa",
+  "english": "English",
+  "indonesian": "Bahasa Indonesia",
+  "selectLanguage": "Pilih Bahasa",
+  "languageChangedToEnglish": "Language changed to English",
+  "languageChangedToIndonesian": "Bahasa berhasil diubah ke Bahasa Indonesia",
+  
+  "helpAndSupport": "Bantuan & Dukungan",
+  "helpComingSoon": "Bantuan & Dukungan segera hadir",
+  "about": "Tentang",
+  "aboutBindexmall": "Tentang Bindexmall",
+  "version": "Versi 2.0.0",
+  "trustedShoppingDestination": "Destinasi belanja terpercaya Anda untuk produk berkualitas dengan harga terbaik.",
+  "copyright": "© 2025 Bindexmall. Hak cipta dilindungi.",
+  "close": "Tutup",
+  
+  "logout": "Keluar",
+  "logoutConfirmation": "Apakah Anda yakin ingin keluar?",
+  "cancel": "Batal",
+  
+  "cart": "Keranjang",
+  "checkout": "Pembayaran",
+  "deals": "Penawaran",
+  "home": "Beranda",
+  "categories": "Kategori",
+  "search": "Cari",
+
+  // Intro Screen
+  "welcomeToBindexmall": "Selamat Datang di Bindexmall",
+  "discoverAmazingProducts": "Temukan produk menakjubkan dari merek favorit Anda",
+  "easyShopping": "Belanja Mudah",
+  "browseThousandsOfProducts": "Jelajahi ribuan produk hanya dengan beberapa ketukan",
+  "securePayment": "Pembayaran Aman",
+  "shopWithConfidence": "Berbelanja dengan percaya diri menggunakan sistem pembayaran aman kami",
+  "skip": "Lewati",
+  "next": "Selanjutnya",
+  "getStarted": "Mulai",
+  
+  // Sign In Screen
+  "signInToContinue": "Masuk untuk melanjutkan",
+  "email": "Email",
+  "enterYourEmail": "Masukkan email Anda",
+  "password": "Kata Sandi",
+  "enterYourPassword": "Masukkan kata sandi Anda",
+  "forgotPassword": "Lupa Kata Sandi?",
+  "forgotPasswordComingSoon": "Fitur lupa kata sandi segera hadir",
+  "signIn": "Masuk",
+  "or": "ATAU",
+  "continueAsGuest": "Lanjutkan sebagai Tamu",
+  "dontHaveAccount": "Belum punya akun? ",
+  "signUp": "Daftar",
+  "pleaseEnterEmail": "Silakan masukkan email Anda",
+  "pleaseEnterValidEmail": "Silakan masukkan email yang valid",
+  "pleaseEnterPassword": "Silakan masukkan kata sandi Anda",
+  "passwordMinLength": "Kata sandi minimal 6 karakter",
+  "signInFailed": "Gagal masuk: {error}",
+  
+  // Sign Up Screen
+  "createAccount": "Buat Akun",
+  "signUpToGetStarted": "Daftar untuk memulai",
+  "fullName": "Nama Lengkap",
+  "enterYourFullName": "Masukkan nama lengkap Anda",
+  "phoneNumber": "Nomor Telepon",
+  "enterYourPhoneNumber": "Masukkan nomor telepon Anda",
+  "phoneExample": "Contoh: 812XXXXXXXX",
+  "confirmPassword": "Konfirmasi Kata Sandi",
+  "reenterYourPassword": "Masukkan kembali kata sandi Anda",
+  "atLeast6Characters": "Minimal 6 karakter",
+  "iAgreeToThe": "Saya setuju dengan ",
+  "termsAndConditions": "Syarat dan Ketentuan",
+  "pleaseEnterName": "Silakan masukkan nama Anda",
+  "nameMinLength": "Nama minimal 3 karakter",
+  "pleaseEnterPhoneNumber": "Silakan masukkan nomor telepon Anda",
+  "phoneMinLength": "Nomor telepon minimal 10 digit",
+  "phoneTooLong": "Nomor telepon terlalu panjang",
+  "pleaseConfirmPassword": "Silakan konfirmasi kata sandi Anda",
+  "passwordsDoNotMatch": "Kata sandi tidak cocok",
+  "pleaseAcceptTerms": "Silakan setujui syarat dan ketentuan",
+  "accountCreatedSuccessfully": "Akun berhasil dibuat!",
+  "alreadyHaveAccount": "Sudah punya akun? ",
+
+  // Addresses Screen
+  "myAddresses": "Alamat Saya",
+  "loginRequired": "Login Diperlukan",
+  "needLoginToManageAddresses": "Anda perlu login untuk mengelola alamat Anda.",
+  "pleaseLoginToManageAddresses": "Silakan login untuk mengelola alamat Anda",
+  "loginNow": "Login Sekarang",
+  "login": "Login",
+  "noAddresses": "Tidak Ada Alamat",
+  "addFirstAddress": "Tambahkan alamat pertama Anda untuk memulai",
+  "addAddress": "Tambah Alamat",
+  "default": "DEFAULT",
+  "edit": "Edit",
+  "setAsDefault": "Jadikan Default",
+  "delete": "Hapus",
+  "deleteAddress": "Hapus Alamat",
+  "deleteAddressConfirmation": "Apakah Anda yakin ingin menghapus alamat ini?",
+  "addressDeleted": "Alamat dihapus",
+  
+  // Add/Edit Address Screen
+  "editAddress": "Edit Alamat",
+  "firstName": "Nama Depan",
+  "firstNameRequired": "Nama depan wajib diisi",
+  "lastName": "Nama Belakang (opsional)",
+  "companyName": "Nama Perusahaan (opsional)",
+  "phone": "Telepon",
+  "phoneRequired": "Nomor telepon wajib diisi",
+  "emailRequired": "Email wajib diisi",
+  "invalidEmail": "Email tidak valid",
+  "province": "Provinsi",
+  "provinceRequired": "Provinsi wajib diisi",
+  "city": "Kota",
+  "required": "Wajib",
+  "district": "Kecamatan",
+  "streetAddress": "Alamat Jalan",
+  "addressRequired": "Alamat wajib diisi",
+  "apartmentUnit": "Apartment/Unit/Blok (opsional)",
+  "setAsDefaultAddress": "Jadikan alamat default",
+  "defaultAddressDescription": "Alamat ini akan digunakan secara default untuk checkout",
+  "updateAddress": "Update Alamat",
+  "saveAddress": "Simpan Alamat",
+  "addressUpdated": "Alamat diperbarui",
+  "addressSaved": "Alamat disimpan",
+  "error": "Error: {message}",
+
+  // Cart Screen
+  "shoppingCart": "Keranjang Belanja",
+  "clearAll": "Hapus Semua",
+  "cartIsEmpty": "Keranjang Anda kosong",
+  "addProductsToStart": "Tambahkan produk untuk memulai",
+  "startShopping": "Mulai Belanja",
+  "itemsInCart": "{count} {count, plural, =1{Item} other{Items}} di Keranjang",
+  "@itemsInCart": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readyForCheckout": "Siap untuk checkout",
+  "removedFromCart": "{name} dihapus dari keranjang",
+  "@removedFromCart": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "BATAL",
+  "subtotal": "Subtotal",
+  "shipping": "Ongkir",
+  "free": "GRATIS",
+  "tax": "PPN (11%)",
+  "total": "Total",
+  "proceedToPayment": "Lanjut ke Pembayaran",
+  "removeItem": "Hapus Item",
+  "removeFromCart": "Hapus \"{name}\" dari keranjang?",
+  "@removeFromCart": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clearCart": "Kosongkan Keranjang",
+  "clearCartConfirmation": "Apakah Anda yakin ingin menghapus semua item dari keranjang?",
+  "cartCleared": "Keranjang dikosongkan",
+  "clear": "Kosongkan",
+  
+  // Catalog Screen
+  "searchProducts": "Cari produk...",
+  "errorLoadingProducts": "Error memuat produk",
+  "retry": "Coba Lagi",
+  "noProductsFound": "Produk tidak ditemukan",
+  "clearSearch": "Hapus pencarian",
+  "filterAndSort": "Filter & Urutkan",
+  "clearAllFilters": "Hapus Semua",
+  "sortBy": "Urutkan Berdasarkan",
+  "name": "Nama",
+  "priceLowToHigh": "Harga: Rendah ke Tinggi",
+  "priceHighToLow": "Harga: Tinggi ke Rendah",
+  "priceRange": "Rentang Harga",
+  "applyFilters": "Terapkan Filter",
+  
+  // Categories Screen
+  "categories": "Kategori",
+  "settings": "Pengaturan",
+  "settingsComingSoon": "Fitur pengaturan segera hadir",
+  "errorLoadingCategories": "Error memuat kategori",
+  "noCategoriesAvailable": "Tidak ada kategori tersedia",
+  "shopByCategory": "Belanja Berdasarkan Kategori",
+  "findWhatYouNeed": "Temukan yang Anda butuhkan",
+  
+  // Checkout Screen
+  "checkout": "Checkout",
+  "orderSummary": "Ringkasan Pesanan",
+  "billingShippingInfo": "Informasi Penagihan & Pengiriman",
+  "selectAddress": "Pilih Alamat",
+  "noSavedAddresses": "Tidak Ada Alamat Tersimpan",
+  "noSavedAddressesDesc": "Anda belum memiliki alamat tersimpan. Apakah Anda ingin menambahkan?",
+  "country": "Negara/Wilayah",
+  "orderNotes": "Catatan Pesanan (opsional)",
+  "orderNotesHint": "Catatan untuk pesanan Anda, misal: instruksi khusus untuk pengiriman",
+  "paymentMethod": "Metode Pembayaran",
+  "bankTransfer": "Transfer Bank",
+  "bankTransferDesc": "BCA 5710900711 a.n. PT. Bambi Mega Niaga",
+  "bankTransferNote": "Upload bukti transfer dan cantumkan nomor pesanan di catatan",
+  "otherOnlinePayment": "Pembayaran Online Lainnya",
+  "viaMidtrans": "via Midtrans",
+  "midtransPaymentMethods": "QRIS, Virtual Account (BCA, BNI, BRI, Mandiri, CIMB), GoPay, Kartu Kredit/Debit",
+  "totalPayment": "Total Pembayaran",
+  "createOrder": "Buat Pesanan",
+  "payNow": "Bayar Sekarang",
+  "pleaseCompleteAllFields": "Mohon lengkapi semua field yang diperlukan",
+  "cartEmpty": "Keranjang Anda kosong",
+  "checkoutFailed": "Checkout gagal: {error}",
+  "@checkoutFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "payment": "Pembayaran",
+  "cancelPayment": "Batalkan Pembayaran?",
+  "cancelPaymentConfirmation": "Apakah Anda yakin ingin membatalkan pembayaran ini?",
+  "no": "Tidak",
+  "yesCancelPayment": "Ya, Batalkan",
+  "paymentSuccessful": "Pembayaran Berhasil!",
+  "paymentSuccessDesc": "Pesanan Anda telah berhasil dibuat dan pembayaran dikonfirmasi.",
+  "orderId": "Order ID: {id}",
+  "@orderId": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "backToHome": "Kembali ke Beranda",
+  "orderCreatedSuccessfully": "Pesanan Berhasil Dibuat!",
+  "transferPaymentTo": "Silakan transfer pembayaran ke:",
+  "bank": "Bank: BCA",
+  "accountNumber": "No. Rekening: 5710900711",
+  "accountName": "Atas Nama: PT. Bambi Mega Niaga",
+  "importantNote": "⚠️ PENTING:\n1. Upload bukti transfer di website\n2. Cantumkan nomor pesanan di catatan transfer\n3. Pesanan akan diproses setelah pembayaran dikonfirmasi",
+  "understood": "Mengerti",
+  "paymentFailed": "Pembayaran gagal",
+  "paymentPending": "Pembayaran pending, silakan selesaikan pembayaran",
+  
+  // Deals Screen
+  "specialDeals": "Penawaran Spesial",
+  "listView": "Tampilan List",
+  "gridView": "Tampilan Grid",
+  "highestDiscount": "Diskon Tertinggi",
+  "lowestDiscount": "Diskon Terendah",
+  "failedToLoadDeals": "Gagal memuat penawaran",
+  "noDealsAvailable": "Tidak Ada Penawaran",
+  "checkBackLater": "Periksa kembali nanti untuk penawaran menakjubkan!",
+  "hotDeals": "🔥 Penawaran Panas",
+  "productsOnSale": "{count} produk sedang diskon",
+  "@productsOnSale": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upToDiscount": "Diskon hingga 83%!",
+
+  
+}

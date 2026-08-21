@@ -1,0 +1,293 @@
+{
+  "@@locale": "en",
+  
+  "appName": "Bindexmall",
+  "yourShoppingCompanion": "Your Shopping Companion",
+  "loading": "Loading...",
+  
+  "profile": "Profile",
+  "guestUser": "Guest User",
+  "orders": "Orders",
+  "wishlist": "Wishlist",
+  "reviews": "Reviews",
+  "reviewsComingSoon": "Reviews coming soon",
+  
+  "editProfile": "Edit Profile",
+  "editProfileComingSoon": "Edit profile coming soon",
+  "myOrders": "My Orders",
+  "addresses": "Addresses",
+  "myWishlist": "My Wishlist",
+  
+  "notifications": "Notifications",
+  "notificationSettingsComingSoon": "Notification settings coming soon",
+  "language": "Language",
+  "english": "English",
+  "indonesian": "Bahasa Indonesia",
+  "selectLanguage": "Select Language",
+  "languageChangedToEnglish": "Language changed to English",
+  "languageChangedToIndonesian": "Bahasa berhasil diubah ke Bahasa Indonesia",
+  
+  "helpAndSupport": "Help & Support",
+  "helpComingSoon": "Help & Support coming soon",
+  "about": "About",
+  "aboutBindexmall": "About Bindexmall",
+  "version": "Version 2.0.0",
+  "trustedShoppingDestination": "Your trusted shopping destination for quality products at great prices.",
+  "copyright": "© 2025 Bindexmall. All rights reserved.",
+  "close": "Close",
+  
+  "logout": "Logout",
+  "logoutConfirmation": "Are you sure you want to logout?",
+  "cancel": "Cancel",
+  
+  "cart": "Cart",
+  "checkout": "Checkout",
+  "deals": "Deals",
+  "home": "Home",
+  "categories": "Categories",
+  "search": "Search",
+
+  // Intro Screen
+  "welcomeToBindexmall": "Welcome to Bindexmall",
+  "discoverAmazingProducts": "Discover amazing products from your favorite brands",
+  "easyShopping": "Easy Shopping",
+  "browseThousandsOfProducts": "Browse thousands of products with just a few taps",
+  "securePayment": "Secure Payment",
+  "shopWithConfidence": "Shop with confidence using our secure payment system",
+  "skip": "Skip",
+  "next": "Next",
+  "getStarted": "Get Started",
+  
+  // Sign In Screen
+  "signInToContinue": "Sign in to continue",
+  "email": "Email",
+  "enterYourEmail": "Enter your email",
+  "password": "Password",
+  "enterYourPassword": "Enter your password",
+  "forgotPassword": "Forgot Password?",
+  "forgotPasswordComingSoon": "Forgot password feature coming soon",
+  "signIn": "Sign In",
+  "or": "OR",
+  "continueAsGuest": "Continue as Guest",
+  "dontHaveAccount": "Don't have an account? ",
+  "signUp": "Sign Up",
+  "pleaseEnterEmail": "Please enter your email",
+  "pleaseEnterValidEmail": "Please enter a valid email",
+  "pleaseEnterPassword": "Please enter your password",
+  "passwordMinLength": "Password must be at least 6 characters",
+  "signInFailed": "Sign in failed: {error}",
+  
+  // Sign Up Screen
+  "createAccount": "Create Account",
+  "signUpToGetStarted": "Sign up to get started",
+  "fullName": "Full Name",
+  "enterYourFullName": "Enter your full name",
+  "phoneNumber": "Phone Number",
+  "enterYourPhoneNumber": "Enter your phone number",
+  "phoneExample": "Example: 812XXXXXXXX",
+  "confirmPassword": "Confirm Password",
+  "reenterYourPassword": "Re-enter your password",
+  "atLeast6Characters": "At least 6 characters",
+  "iAgreeToThe": "I agree to the ",
+  "termsAndConditions": "Terms and Conditions",
+  "pleaseEnterName": "Please enter your name",
+  "nameMinLength": "Name must be at least 3 characters",
+  "pleaseEnterPhoneNumber": "Please enter your phone number",
+  "phoneMinLength": "Phone number must be at least 10 digits",
+  "phoneTooLong": "Phone number is too long",
+  "pleaseConfirmPassword": "Please confirm your password",
+  "passwordsDoNotMatch": "Passwords do not match",
+  "pleaseAcceptTerms": "Please accept terms and conditions",
+  "accountCreatedSuccessfully": "Account created successfully!",
+  "alreadyHaveAccount": "Already have an account? ",
+
+  // Addresses Screen
+  "myAddresses": "My Addresses",
+  "loginRequired": "Login Required",
+  "needLoginToManageAddresses": "You need to login to manage your addresses.",
+  "pleaseLoginToManageAddresses": "Please login to manage your addresses",
+  "loginNow": "Login Now",
+  "login": "Login",
+  "noAddresses": "No Addresses",
+  "addFirstAddress": "Add your first address to get started",
+  "addAddress": "Add Address",
+  "default": "DEFAULT",
+  "edit": "Edit",
+  "setAsDefault": "Set as Default",
+  "delete": "Delete",
+  "deleteAddress": "Delete Address",
+  "deleteAddressConfirmation": "Are you sure you want to delete this address?",
+  "addressDeleted": "Address deleted",
+  
+  // Add/Edit Address Screen
+  "editAddress": "Edit Address",
+  "firstName": "First Name",
+  "firstNameRequired": "First name is required",
+  "lastName": "Last Name (optional)",
+  "companyName": "Company Name (optional)",
+  "phone": "Phone",
+  "phoneRequired": "Phone number is required",
+  "emailRequired": "Email is required",
+  "invalidEmail": "Invalid email",
+  "province": "Province",
+  "provinceRequired": "Province is required",
+  "city": "City",
+  "required": "Required",
+  "district": "District",
+  "streetAddress": "Street Address",
+  "addressRequired": "Address is required",
+  "apartmentUnit": "Apartment/Unit/Block (optional)",
+  "setAsDefaultAddress": "Set as default address",
+  "defaultAddressDescription": "This address will be used by default for checkout",
+  "updateAddress": "Update Address",
+  "saveAddress": "Save Address",
+  "addressUpdated": "Address updated",
+  "addressSaved": "Address saved",
+  "error": "Error: {message}",
+
+  // Cart Screen
+  "shoppingCart": "Shopping Cart",
+  "clearAll": "Clear All",
+  "cartIsEmpty": "Your cart is empty",
+  "addProductsToStart": "Add products to start",
+  "startShopping": "Start Shopping",
+  "itemsInCart": "{count} {count, plural, =1{Item} other{Items}} in Cart",
+  "@itemsInCart": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readyForCheckout": "Ready for checkout",
+  "removedFromCart": "{name} removed from cart",
+  "@removedFromCart": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "undo": "UNDO",
+  "subtotal": "Subtotal",
+  "shipping": "Shipping",
+  "free": "FREE",
+  "tax": "Tax (11%)",
+  "total": "Total",
+  "proceedToPayment": "Proceed to Payment",
+  "removeItem": "Remove Item",
+  "removeFromCart": "Remove \"{name}\" from cart?",
+  "@removeFromCart": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clearCart": "Clear Cart",
+  "clearCartConfirmation": "Are you sure you want to remove all items from cart?",
+  "cartCleared": "Cart cleared",
+  "clear": "Clear",
+  
+  // Catalog Screen
+  "searchProducts": "Search products...",
+  "errorLoadingProducts": "Error loading products",
+  "retry": "Retry",
+  "noProductsFound": "No products found",
+  "clearSearch": "Clear search",
+  "filterAndSort": "Filter & Sort",
+  "clearAllFilters": "Clear All",
+  "sortBy": "Sort By",
+  "name": "Name",
+  "priceLowToHigh": "Price: Low to High",
+  "priceHighToLow": "Price: High to Low",
+  "priceRange": "Price Range",
+  "applyFilters": "Apply Filters",
+  
+  // Categories Screen
+  "categories": "Categories",
+  "settings": "Settings",
+  "settingsComingSoon": "Settings feature coming soon",
+  "errorLoadingCategories": "Error loading categories",
+  "noCategoriesAvailable": "No categories available",
+  "shopByCategory": "Shop by Category",
+  "findWhatYouNeed": "Find what you need",
+  
+  // Checkout Screen
+  "checkout": "Checkout",
+  "orderSummary": "Order Summary",
+  "billingShippingInfo": "Billing & Shipping Information",
+  "selectAddress": "Select Address",
+  "noSavedAddresses": "No Saved Addresses",
+  "noSavedAddressesDesc": "You don't have any saved addresses. Would you like to add one?",
+  "country": "Country/Region",
+  "orderNotes": "Order Notes (optional)",
+  "orderNotesHint": "Notes about your order, e.g. special notes for delivery",
+  "paymentMethod": "Payment Method",
+  "bankTransfer": "Bank Transfer",
+  "bankTransferDesc": "BCA 5710900711 a.n. PT. Bambi Mega Niaga",
+  "bankTransferNote": "Upload proof of transfer and include order number in notes",
+  "otherOnlinePayment": "Other Online Payment",
+  "viaMidtrans": "via Midtrans",
+  "midtransPaymentMethods": "QRIS, Virtual Account (BCA, BNI, BRI, Mandiri, CIMB), GoPay, Credit/Debit Card",
+  "totalPayment": "Total Payment",
+  "createOrder": "Create Order",
+  "payNow": "Pay Now",
+  "pleaseCompleteAllFields": "Please complete all required fields",
+  "cartEmpty": "Your cart is empty",
+  "checkoutFailed": "Checkout failed: {error}",
+  "@checkoutFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "payment": "Payment",
+  "cancelPayment": "Cancel Payment?",
+  "cancelPaymentConfirmation": "Are you sure you want to cancel this payment?",
+  "no": "No",
+  "yesCancelPayment": "Yes, Cancel",
+  "paymentSuccessful": "Payment Successful!",
+  "paymentSuccessDesc": "Your order has been successfully created and payment confirmed.",
+  "orderId": "Order ID: {id}",
+  "@orderId": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "backToHome": "Back to Home",
+  "orderCreatedSuccessfully": "Order Created Successfully!",
+  "transferPaymentTo": "Please transfer payment to:",
+  "bank": "Bank: BCA",
+  "accountNumber": "Account Number: 5710900711",
+  "accountName": "Account Name: PT. Bambi Mega Niaga",
+  "importantNote": "⚠️ IMPORTANT:\n1. Upload proof of transfer on website\n2. Include order number in transfer notes\n3. Order will be processed after payment confirmation",
+  "understood": "Understood",
+  "paymentFailed": "Payment failed",
+  "paymentPending": "Payment pending, please complete payment",
+  
+  // Deals Screen
+  "specialDeals": "Special Deals",
+  "listView": "List View",
+  "gridView": "Grid View",
+  "highestDiscount": "Highest Discount",
+  "lowestDiscount": "Lowest Discount",
+  "failedToLoadDeals": "Failed to load deals",
+  "noDealsAvailable": "No Deals Available",
+  "checkBackLater": "Check back later for amazing deals!",
+  "hotDeals": "🔥 Hot Deals",
+  "productsOnSale": "{count} products on sale",
+  "@productsOnSale": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upToDiscount": "Up to 83% OFF!",
+
+  
+}

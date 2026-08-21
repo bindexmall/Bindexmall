@@ -1,0 +1,19 @@
+Ini bukan .gitignore beneran — cuma catatan.
+
+File .gitignore project ini ada di root project (sejajar pubspec.yaml),
+BUKAN di dalam folder lib/. Karena yang di-share ke lo cuma folder lib/,
+gue ga bisa taruh .gitignore-nya di tempat yang bener di sini.
+
+Yang perlu lo lakuin: buka .gitignore yang udah ada di root project lo,
+tambahin baris ini:
+
+    lib/config/secrets.dart
+
+Kalau project ini belum punya .gitignore sama sekali (jarang tapi
+kejadian), bikin file baru namanya ".gitignore" persis di root project
+(sejajar pubspec.yaml), isinya minimal baris di atas.
+
+Setelah itu, kalau ternyata secrets.dart ini SEBELUMNYA udah kepush ke
+git (kemungkinan besar iya, secrets.dart yang gue taruh ini kan asalnya
+dari kode yang hardcoded), nambahin ke .gitignore doang GA CUKUP — dia
+masih ada di riwayat commit lama. Cek README.md poin soal ini juga.
